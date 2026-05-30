@@ -26,3 +26,6 @@ configMapGenerator:
     files:
       - message-migrations/001_init.sql
       - message-migrations/002_add_file_name.sql
+  - name: postgres-init-cm
+    files:
+      - init-db.sh
