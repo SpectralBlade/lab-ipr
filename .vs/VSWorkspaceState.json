@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\k8s",
+    "\\k8s\\overlays",
+    "\\k8s\\overlays\\dev",
+    "\\k8s\\overlays\\prod",
+    "\\message-service\\internal",
+    "\\message-service\\internal\\config"
+  ],
+  "SelectedNode": "\\k8s\\overlays\\prod\\kustomization.yaml",
+  "PreviewInSolutionExplorer": false
+}
