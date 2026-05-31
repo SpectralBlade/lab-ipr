@@ -3,6 +3,7 @@ kind: PersistentVolume
 metadata:
   name: s3-pv-messager-uploads
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
   capacity:
@@ -28,6 +29,7 @@ metadata:
   name: message-uploads-pvc
   namespace: messager
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
   resources:
