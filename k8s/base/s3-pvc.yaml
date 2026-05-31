@@ -12,10 +12,9 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: ch.ctrox.csi.s3-driver
-    volumeHandle: s3-volume-messager
+    volumeHandle: messager-uploads
     volumeAttributes:
-      bucketName: messager-uploads
-      mounter: rclone
+      mounter: s3fs
     nodeStageSecretRef:
       name: minio-secret
       namespace: messager
