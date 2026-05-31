@@ -33,4 +33,4 @@
 
 ### Статусы
 
-![argocd_statuses](../src/argocd_statuses.png)
+![argocd_status](../src/argocd_status.png)
