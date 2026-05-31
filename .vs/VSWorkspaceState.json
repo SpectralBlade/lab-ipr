@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\argocd",
     "\\k8s",
+    "\\k8s\\base",
     "\\k8s\\overlays",
     "\\k8s\\overlays\\dev",
-    "\\k8s\\overlays\\prod",
-    "\\message-service\\internal",
-    "\\message-service\\internal\\config"
+    "\\k8s\\overlays\\prod"
   ],
-  "SelectedNode": "\\k8s\\overlays\\prod\\kustomization.yaml",
+  "SelectedNode": "\\k8s\\base\\s3-pvc.yaml",
   "PreviewInSolutionExplorer": false
 }
