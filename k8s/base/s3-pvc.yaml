@@ -1,3 +1,15 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minio-secret
+  namespace: messager
+stringData:
+  accessKeyID: messager-key
+  secretAccessKey: messager-secret-key
+  endpoint: http://minio.messager.svc.cluster.local:9000
+type: Opaque
+---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -12,11 +24,9 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: ch.ctrox.csi.s3-driver
-    volumeHandle: messager-uploads
+    volumeHandle: messager-uploads 
     volumeAttributes:
-      bucketName: messager-uploads
       mounter: rclone
-      endpoint: http://minio.messager.svc.cluster.local:9000
     nodeStageSecretRef:
       name: minio-secret
       namespace: messager
