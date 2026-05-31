@@ -20,6 +20,9 @@ spec:
     nodePublishSecretRef:
       name: minio-secret
       namespace: messager
+    nodeStageSecretRef:
+      name: minio-secret
+      namespace: messager
     volumeAttributes:
       bucketName: messager-uploads
       mounter: rclone
