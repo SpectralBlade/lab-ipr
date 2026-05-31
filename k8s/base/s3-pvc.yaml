@@ -12,7 +12,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: ch.ctrox.csi.s3-driver
-    volumeHandle: messager-uploads
+    volumeHandle: s3-volume-messager
     volumeAttributes:
       bucketName: messager-uploads
       mounter: s3fs
@@ -23,6 +23,9 @@ spec:
     nodePublishSecretRef:
       name: minio-secret
       namespace: messager
+  mountOptions:
+    - url=http://minio.messager.svc.cluster.local:9000
+    - use_path_request_style
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
