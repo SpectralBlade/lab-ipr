@@ -14,7 +14,9 @@ spec:
     driver: ch.ctrox.csi.s3-driver
     volumeHandle: messager-uploads
     volumeAttributes:
+      bucketName: messager-uploads
       mounter: s3fs
+      endpoint: http://minio.messager.svc.cluster.local:9000
     nodeStageSecretRef:
       name: minio-secret
       namespace: messager
