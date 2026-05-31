@@ -15,8 +15,8 @@ spec:
     volumeHandle: s3-volume-messager
     volumeAttributes:
       bucketName: messager-uploads
-      mounter: rclone
-      endpoint: http://minio.messager.svc.cluster.local:9000
+      mounter: s3fs                                           
+      endpoint: http://minio.messager.svc.cluster.local:9000 
     nodeStageSecretRef:
       name: minio-secret
       namespace: messager
